@@ -1,0 +1,30 @@
+<div class="container my-4">
+    <div class="my-3">
+        <h1 class="text-center">Add Producr</h1>
+    </div>
+    <div>
+        <form [formGroup]="product" (ngSubmit)="Onsubmit()">
+            <div class="form-group">
+              <label for="">Id</label>
+              <input type="text"
+                class="form-control" name="" id="" formControlName="productid" aria-describedby="helpId" placeholder="Enter Product id">
+            </div>
+            <div class="form-group">
+              <label for="">Product Name</label>
+              <input type="text"
+                class="form-control" name="" id="" aria-describedby="helpId" formControlName="productname" placeholder="Enter product Name">
+            </div>
+            <div class="form-group">
+              <label for="">Product price</label>
+              <input type="text"
+                class="form-control" name="" id="" formControlName="productprice" aria-describedby="helpId" placeholder="Enter Product Price">
+            </div>
+            <div class="form-group">
+              <label for="">Product Description</label>
+              <input type="text"
+                class="form-control" name="" id="" formControlName="productdesc" aria-describedby="helpId" placeholder="Enter Product Description">
+            </div>
+            <button class="btn btn-primary my-3" [routerLink]="['/addproduct']" type="submit">Save</button>
+        </form>
+    </div>
+</div>

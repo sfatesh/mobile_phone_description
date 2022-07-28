@@ -1,0 +1,7 @@
+.container{
+    width: 500px;
+    margin: auto;
+    justify-content: center;
+    justify-items: center;
+    border: 2px solid black;
+}
