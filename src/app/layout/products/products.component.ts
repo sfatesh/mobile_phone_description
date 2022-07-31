@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ApiService } from 'src/app/service/api.service';
 export class ProductsComponent implements OnInit {
   products:any
 
-  constructor(private service:ApiService) { }
+  constructor(private service:ApiService,private router:Router) { }
 
   ngOnInit(): void {
    this.service.getProduct((res:any)=>{
@@ -39,6 +40,10 @@ export class ProductsComponent implements OnInit {
 
 
        this.isUserLoggedIn = false;
+  }
+  logout(){
+    this.service.logout();
+      this.router.navigate(['/login']);
   }
  
 }

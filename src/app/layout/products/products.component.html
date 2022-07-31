@@ -1,3 +1,12 @@
+<div>
+    <div *ngIf="isUserLoggedIn; else isLogOut">
+        <a class="nav-link" (click)="logout()"><button class="btn btn-danger">Logout</button></a>
+  </div>
+
+  <ng-template #isLogOut>
+              <a class="nav-link" routerLink="/login">Login</a>
+  </ng-template>
+</div>
 <div class="container my-5">
     <div class="d-flex">
         <h1>Product Details</h1>
